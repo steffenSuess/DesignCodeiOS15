@@ -11,6 +11,7 @@
 		BC448CFE27575D9100CE9536 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC448CFD27575D9100CE9536 /* ContentView.swift */; };
 		BC448D0027575D9200CE9536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC448CFF27575D9200CE9536 /* Assets.xcassets */; };
 		BC448D0327575D9200CE9536 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC448D0227575D9200CE9536 /* Preview Assets.xcassets */; };
+		BC5C4701275DFA0200012E2B /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5C4700275DFA0200012E2B /* AccountView.swift */; };
 		BCDC357A275A098C00514394 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC3579275A098C00514394 /* Styles.swift */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +21,7 @@
 		BC448CFD27575D9100CE9536 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC448CFF27575D9200CE9536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC448D0227575D9200CE9536 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BC5C4700275DFA0200012E2B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		BCDC3579275A098C00514394 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +57,7 @@
 			children = (
 				BC448CFB27575D9100CE9536 /* DesignCodeiOS15App.swift */,
 				BC448CFD27575D9100CE9536 /* ContentView.swift */,
+				BC5C4700275DFA0200012E2B /* AccountView.swift */,
 				BCDC3579275A098C00514394 /* Styles.swift */,
 				BC448CFF27575D9200CE9536 /* Assets.xcassets */,
 				BC448D0127575D9200CE9536 /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC5C4701275DFA0200012E2B /* AccountView.swift in Sources */,
 				BCDC357A275A098C00514394 /* Styles.swift in Sources */,
 				BC448CFE27575D9100CE9536 /* ContentView.swift in Sources */,
 				BC448CFC27575D9100CE9536 /* DesignCodeiOS15App.swift in Sources */,
