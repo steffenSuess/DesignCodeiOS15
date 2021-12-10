@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AccountView: View {
+    @State var isDeleted = false
+    
     var body: some View {
         NavigationView {
             List {
@@ -24,7 +26,7 @@ struct AccountView: View {
                                 .symbolVariant(.fill)
                                 .foregroundColor(.blue)
                                 .font(.system(size: 200))
-                            .offset(x: -50, y: -100)
+                                .offset(x: -50, y: -100)
                         )
                     Text("Meng To")
                         .font(.title.weight(.semibold))
@@ -38,11 +40,51 @@ struct AccountView: View {
                 .frame(maxWidth: .infinity)
                 .padding()
                 Section {
-                    Label("Settings", systemImage: "gear")
-                    Label("Billing", systemImage: "creditcard")
-                    Label("Help", systemImage: "questionmark")
+                    NavigationLink(destination: ContentView()) {
+                        Label("Settings", systemImage: "gear")
+                    }
+                    NavigationLink { ContentView() } label: {
+                        Label("Billing", systemImage: "creditcard")
+                    }
+                    NavigationLink { ContentView() } label: {
+                        Label("Help", systemImage: "questionmark")
+                    }
                 }
+                .accentColor(.primary)
                 .listRowSeparatorTint(.blue)
+                .listRowSeparator(.hidden)
+                
+                Section {
+                    if !isDeleted {
+                        Link(destination: URL(string: "https://apple.com")!) {
+                            HStack {
+                                Label("Website", systemImage: "house")
+                                Spacer()
+                                Image(systemName: "link")
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                            Button(action: { isDeleted = true }) {
+                                Label("Delete", systemImage: "trash")
+                            }
+                            .tint(.red)
+                            Button {} label: {
+                                Label("Pin", systemImage: "pin")
+                            }
+                            .tint(.yellow)
+                        }
+                    }
+                    Link(destination: URL(string: "https://youtube.com")!) {
+                        HStack {
+                            Label("Youtube", systemImage: "tv")
+                            Spacer()
+                            Image(systemName: "link")
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+                .accentColor(.primary)
                 .listRowSeparator(.hidden)
             }
             .listStyle(.insetGrouped)
